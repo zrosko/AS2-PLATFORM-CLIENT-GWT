@@ -1,0 +1,37 @@
+https://developers.google.com/web-toolkit/doc/latest/DevGuideServerCommunication?hl=hr#DevGuideSerializableTypes
+http://code.google.com/p/dlappeng/source/browse/trunk/gicms/src/com/gogosaas/gicms/app/client/Application.java?r=139
+http://code.google.com/p/sg-train-example/source/browse/trunk/sg-rpc-sh/milestones/06-full-version/gwt/gwt-common/src/main/java/com/mycompany/gwt/common/client/GenericGwtRpcService.java?r=291
+http://code.google.com/p/gwtportlets/wiki/Portlets
+http://examples.javacodegeeks.com/enterprise-java/maven/how-to-deploy-maven-based-war-file-to-tomcat-example/
+CMD za network start
+\\portalbkp\JavaPortalbkp\j2re1.4.2_10\bin\java -mx750m -classpath
+
+"\\portalbkp\tomcatPortalbkp\client\naplata.jar;
+
+\\portalbkp\JavaPortalbkp\j2re1.4.2_10\lib\rt.jar;
+\\portalbkp\JavaPortalbkp\j2re1.4.2_10\lib\charsets.jar;
+
+\\portalbkp\tomcatPortalbkp\lib\auibase.jar;
+\\portalbkp\tomcatPortalbkp\lib\auifw.jar; 
+\\portalbkp\tomcatPortalbkp\lib\auii18n.jar;
+\\portalbkp\tomcatPortalbkp\lib\auii18n_hr.jar;
+\\portalbkp\tomcatPortalbkp\lib\auiswing.jar;
+\\portalbkp\tomcatPortalbkp\lib\commons-logging-api.jar;
+\\portalbkp\tomcatPortalbkp\lib\jasperreports-1.0.1.jar;
+\\portalbkp\tomcatPortalbkp\lib\jhall.jar; 
+\\portalbkp\tomcatPortalbkp\lib\jxl.jar; 
+\\portalbkp\tomcatPortalbkp\lib\uil.jar; 
+\\portalbkp\tomcatPortalbkp\lib\swing11spinner_Runtime.jar;
+\\portalbkp\tomcatPortalbkp\lib\BrowserLauncher2-10rc3.jar;     
+\\portalbkp\tomcatPortalbkp\lib\poi_save.zip;
+\\portalbkp\tomcatPortalbkp\lib\iText-2.1.3.jar;
+\\portalbkp\tomcatPortalbkp\lib\iText-rtf-2.1.3.jar;
+\\portalbkp\tomcatPortalbkp\lib\jfreechart-1.0.0-rc1.jar;
+\\portalbkp\tomcatPortalbkp\lib\jcommon-1.0.0-rc1.jar;
+
+" 
+
+hr.adriacomsoftware.app.client.desktop.main.Start -h 192.168.0.75:1106/hr.adriacomsoftware.inf.common.transport.rmi.J2EETransportServerRMI -t RMI
+
+------------------------- FINAL ---------------
+\\portalbkp\JavaPortalbkp\j2re1.4.2_10\bin\java -mx750m -classpath "\\portalbkp\tomcatPortalbkp\webapps\adriacom\client\naplata.jar;\\portalbkp\JavaPortalbkp\j2re1.4.2_10\webapps\adriacom\lib\rt.jar;\\portalbkp\JavaPortalbkp\j2re1.4.2_10\webapps\adriacom\lib\charsets.jar;\\portalbkp\tomcatPortalbkp\webapps\adriacom\lib\auibase.jar;\\portalbkp\tomcatPortalbkp\webapps\adriacom\lib\auifw.jar;\\portalbkp\tomcatPortalbkp\webapps\adriacom\lib\auii18n.jar;\\portalbkp\tomcatPortalbkp\lib\auii18n_hr.jar;\\portalbkp\tomcatPortalbkp\webapps\adriacom\lib\auiswing.jar;\\portalbkp\tomcatPortalbkp\webapps\adriacom\lib\commons-logging-api.jar;\\portalbkp\tomcatPortalbkp\webapps\adriacom\lib\jasperreports-1.0.1.jar;\\portalbkp\tomcatPortalbkp\webapps\adriacom\lib\jhall.jar;\\portalbkp\tomcatPortalbkp\webapps\adriacom\lib\jxl.jar;\\portalbkp\tomcatPortalbkp\webapps\adriacom\lib\uil.jar;\\portalbkp\tomcatPortalbkp\webapps\adriacom\lib\swing11spinner_Runtime.jar;\\portalbkp\tomcatPortalbkp\webapps\adriacom\lib\BrowserLauncher2-10rc3.jar;\\portalbkp\tomcatPortalbkp\webapps\adriacom\lib\poi_save.zip;\\portalbkp\tomcatPortalbkp\webapps\adriacom\lib\iText-2.1.3.jar;\\portalbkp\tomcatPortalbkp\webapps\adriacom\lib\iText-rtf-2.1.3.jar;\\portalbkp\tomcatPortalbkp\webapps\adriacom\lib\jfreechart-1.0.0-rc1.jar;\\portalbkp\tomcatPortalbkp\webapps\adriacom\lib\jcommon-1.0.0-rc1.jar;" hr.adriacomsoftware.app.client.desktop.main.Start -h 192.168.0.75:1106/hr.adriacomsoftware.inf.common.transport.rmi.J2EETransportServerRMI -t RMI

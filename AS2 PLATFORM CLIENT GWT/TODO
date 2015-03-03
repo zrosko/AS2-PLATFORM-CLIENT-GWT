@@ -1,0 +1,10 @@
+http://www.uptick.com.au/blog?page=5
+http://www.canoo.com/blog/2011/04/05/gwt-dependency-injection-recipes-using-gin/
+U J2EEDataAccessObjectJdbc
+dodati daoCreate i daoStore
+						case Types.DATE:
+							java.sql.Date temp = aFields.getPropertyAsSqlDate(voColumn);
+							if(temp==null)
+								temp = new java.sql.Date (aFields.getAsLongOrZero(voColumn));
+							pstmt.setDate(++i, temp);
+							break;

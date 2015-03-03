@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/APACHE_COMMONS_FILE_UPLOAD"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JASPER_REPORTS"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/SMART_GWT"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/hr.adriacomsoftware.app.client.smartgwt.resources"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/AS2 PLATFORM COMMON"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/AS2 PLATFORM SERVER"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>

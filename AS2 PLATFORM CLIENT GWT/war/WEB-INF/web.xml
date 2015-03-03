@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>rpcServlet</servlet-name>
+    <servlet-class>hr.as2.inf.server.requesthandlers.AS2TransportServerGwtRpc</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>rpcServlet</servlet-name>
+    <url-pattern>/infrastructure/rpc</url-pattern>    
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>greetServlet</servlet-name>
+    <servlet-class>hr.adriacomsoftware.inf.server.gwt.transport.rpc.GreetingServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>greetServlet</servlet-name>
+    <url-pattern>/infrastructure/rpc2</url-pattern>    
+  </servlet-mapping>
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>Infastructure.html</welcome-file>
+  </welcome-file-list>
+</web-app>

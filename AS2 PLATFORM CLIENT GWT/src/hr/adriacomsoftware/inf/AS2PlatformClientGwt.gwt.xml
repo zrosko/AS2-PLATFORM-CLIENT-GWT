@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='Infrastructure'>
+	<inherits name="com.google.gwt.user.User" />
+	<inherits name="com.smartgwt.SmartGwt" />
+	<inherits name="com.smartgwt.SmartGwtNoTheme" />
+	<inherits name="com.smartclient.theme.enterpriseblue.EnterpriseBlue" />
+	<inherits
+		name="com.smartclient.theme.enterpriseblue.EnterpriseBlueResources" />
+	<inherits name="com.smartgwt.tools.SmartGwtTools" />
+	<inherits name="com.google.gwt.i18n.I18N" />
+	<inherits name='hr.adriacomsoftware.app.client.smartgwt.AS2Resources' />
+	<source path='client'/>
+	<source path='common'/>
+	<extend-property name="locale" values="hr,en,de"/>
+	<set-property name="locale" value="hr" />
+</module>

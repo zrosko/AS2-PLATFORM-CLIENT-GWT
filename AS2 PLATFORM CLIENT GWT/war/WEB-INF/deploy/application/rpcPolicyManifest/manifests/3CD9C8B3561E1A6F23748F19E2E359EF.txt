@@ -1,0 +1,2 @@
+serviceClass: com.smartgwt.extensions.client.gwtrpcds.YourService
+path: 41266651D84D5FC6FEA3C9C53512454D.gwt.rpc
