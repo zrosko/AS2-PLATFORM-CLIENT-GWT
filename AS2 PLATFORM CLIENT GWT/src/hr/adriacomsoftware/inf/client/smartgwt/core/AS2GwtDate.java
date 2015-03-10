@@ -9,6 +9,6 @@ public class AS2GwtDate {
 		String currentYear = String.valueOf((int) Math.floor(time / milisPerYear) + 1970);
 		return Integer.valueOf(currentYear);
 		/* 	GregorianCalendar cal = new GregorianCalendar();
-			int end_year = cal.get(Calendar.YEAR); */
+			int end_year = cal.get(Calendar.YEAR); -*/
 	}
 }
