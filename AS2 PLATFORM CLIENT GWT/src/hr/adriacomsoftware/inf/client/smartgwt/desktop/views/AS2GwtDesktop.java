@@ -91,10 +91,10 @@ public abstract class AS2GwtDesktop extends SmartGwtEntryPoint  {
     	initHistory();
     	initErrorHandling();
     	initialSettings();
-    	if(isAuthenticationNeeded())
+    	//if(isAuthenticationNeeded())
     		initUser();
-    	else
-    		initDefaultUser();
+//    	else
+//    		initDefaultUser();
     	//MainLayout is initialized after user credentials are retrieved from server see @AS2GwtDesktop.initUser and 
     }
 
@@ -344,8 +344,8 @@ public abstract class AS2GwtDesktop extends SmartGwtEntryPoint  {
 		if(Cookies.getCookie(AS2ClientContext.AS2_USERNAME)!=null){
 			AS2ClientContext.setSessionValue(AS2ClientContext.USER_FULL_NAME, "Default user");
 			AS2ClientContext.setSessionValue(AS2ClientContext.AS2_USERNAME, "Default");
-			AS2ClientContext.setSessionValue(AS2ClientContext.ROLE, "Admin");
-			AS2ClientContext.setSessionValue(AS2ClientContext.ROLE_ID, "1");
+			AS2ClientContext.setSessionValue(AS2ClientContext.ROLE, "Guest");
+			AS2ClientContext.setSessionValue(AS2ClientContext.ROLE_ID, "0");
 			AS2ClientContext.setSessionValue(AS2ClientContext.APPLICATION_ID, getApplicationId());
 			AS2ClientContext.setSessionValue(AS2ClientContext.APPLICATION,getApplicationName());
 			AS2ClientContext.setSessionValue(AS2ClientContext.LOGIN_TIME,AS2ClientContext.formatDateTimeToString(new java.util.Date()));
