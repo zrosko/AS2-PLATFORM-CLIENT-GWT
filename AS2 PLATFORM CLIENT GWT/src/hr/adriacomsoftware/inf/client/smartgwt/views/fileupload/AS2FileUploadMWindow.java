@@ -126,6 +126,12 @@ public abstract class AS2FileUploadMWindow extends AS2Window{
 	}
 
 	public HLayout getButtonsLayout() {
+		HLayout buttons_layout = new HLayout(2);
+		buttons_layout.setAlign(Alignment.RIGHT);
+		buttons_layout.setStyleName("crm-dynamicForm-buttonsLayout");
+		buttons_layout.setWidth100();
+		buttons_layout.setAutoHeight();
+		buttons_layout.setShowEdges(true);
 		// define Buttons
 		IButton _button_dodaj_privitak = new IButton("Dodaj Privitak");
 		_button_dodaj_privitak.setIcon(AS2Resources.ADD_FILES_PATH);
@@ -184,9 +190,9 @@ public abstract class AS2FileUploadMWindow extends AS2Window{
 				closeWindow(false);
 			}
 		});
-		_buttons_layout.setMembers(_button_dodaj_privitak, _button_otvori,_button_brisi,
+		buttons_layout.setMembers(_button_dodaj_privitak, _button_otvori,_button_brisi,
 				_button_izlaz);
-		return _buttons_layout;
+		return buttons_layout;
 	}
 
 	public void uploadFile(){

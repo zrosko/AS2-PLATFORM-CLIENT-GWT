@@ -514,4 +514,8 @@ public class AS2ListGrid extends ListGrid {
 	public int getRowHeight(ListGridRecord record, int rowNum) {
 		return super.getCellHeight();
 	}
+	public void setFixedRecordHeights(Boolean fixedRecordHeights){
+		super.setFixedRecordHeights(fixedRecordHeights);
+		super.setVirtualScrolling(false); //uklanja prazan prostor na kraju listgrida koli se pojavljuje kad je fixedRecordHeights(false) 
+	}
 }

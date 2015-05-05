@@ -92,6 +92,7 @@ public abstract class AS2Field implements AS2FieldInterface {
 	}
 	/**************** TEXT field ******************/
 	protected void createTextField(String name) {
+		setAttribute(AS2_FILTER_CRITERIA, new Criteria("vrsta",name));
 		setEditor(new TextItem(name));
 	}
 	/**************** TEXTAREA field ******************/
