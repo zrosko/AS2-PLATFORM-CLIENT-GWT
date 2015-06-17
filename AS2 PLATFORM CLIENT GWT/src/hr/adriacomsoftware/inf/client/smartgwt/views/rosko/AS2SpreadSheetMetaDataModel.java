@@ -56,7 +56,7 @@ public class AS2SpreadSheetMetaDataModel extends AS2RestJSONDataSource  {
 	
 	@Override
 	public String getRemoteObject() {
-		return "hr.as2.inf.server.security.authorization.facade.AS2AuthorizationFacadeServer";
+		return "hr.as2.inf.server.da.facade.AS2DataAccessFacadeServer";
 	}
 
 	@Override

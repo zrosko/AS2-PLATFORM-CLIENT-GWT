@@ -13,18 +13,24 @@ import com.smartgwt.client.widgets.Canvas;
 
 public class AS2SpreadSheetMWindow extends AS2Window {
 	String tableName;
+	String schemaName;
+	String databaseName;
 	Criteria criteria;
 
-	public AS2SpreadSheetMWindow(String tableName, Criteria criteria) {
+	public AS2SpreadSheetMWindow(String databaseName, String schemaName,String tableName, Criteria criteria) {
 		super();
 		this.criteria = criteria;
 		this.tableName = tableName;
+		this.schemaName = schemaName;
+		this.databaseName = databaseName;
 		getMetaDataModel();
 	}
 	
 	@Override
 	protected Criteria initCriteria() {
 		criteria.addCriteria("tableName",tableName);
+		criteria.addCriteria("schemaName",schemaName);
+		criteria.addCriteria("databaseName",databaseName);
 		return criteria;
 	}
 	public void createComponents() {
@@ -40,7 +46,7 @@ public class AS2SpreadSheetMWindow extends AS2Window {
 	}
 	
 	public String getWindowFormTitleNew() {
-		return "<b style=\"color:black;font-size:10pt;\">"+tableName+"</b>";
+		return "<b style=\"color:black;font-size:10pt;\">"+databaseName+"."+schemaName+"."+tableName+"</b>";
 	}
 	
 	public AS2ListGrid getListGrid() {
@@ -56,6 +62,8 @@ public class AS2SpreadSheetMWindow extends AS2Window {
 		listGrid.setHeight100();
 		listGrid.setUseAllDataSourceFields(true);
 		listGrid.setShowResizeBar(false);
+		listGrid.setCanEdit(true);
+		listGrid.setModalEditing(true);
 //		AS2ListGridField polje_1 = new AS2ListGridField("polje1",AS2Field.TEXT,"Polje 1");
 //		AS2ListGridField polje_2 = new AS2ListGridField("polje2",AS2Field.TEXT,"Polje 2");		
 //		Criteria meta_criteria = new Criteria();
@@ -138,7 +146,7 @@ public class AS2SpreadSheetMWindow extends AS2Window {
 	
 	@Override
 	public DataSource getModel() {
-		return AS2SpreadSheetModel.getInstance(tableName);
+		return AS2SpreadSheetModel.getInstance(databaseName,schemaName,tableName);
 	}
 	
 	public void getMetaDataModel() {
@@ -146,6 +154,8 @@ public class AS2SpreadSheetMWindow extends AS2Window {
 		Criteria meta_criteria = new Criteria();
 		meta_criteria.addCriteria("@meta","true");
 		meta_criteria.addCriteria("tableName",tableName);
+		meta_criteria.addCriteria("schemaName",schemaName);
+		meta_criteria.addCriteria("databaseName",databaseName);
 		dataSource.fetchData(meta_criteria, new DSCallback() {			
 			@Override
 			public void execute(DSResponse dsResponse, Object data, DSRequest dsRequest) {

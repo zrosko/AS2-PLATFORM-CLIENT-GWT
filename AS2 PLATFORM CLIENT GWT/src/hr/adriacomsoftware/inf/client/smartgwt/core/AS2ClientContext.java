@@ -74,6 +74,7 @@ public class AS2ClientContext {
 		LinkedHashMap<String, Object> profitni_centri = new LinkedHashMap<String, Object>();
 		profitni_centri.put("0", "Svi");
 		profitni_centri.put("22000", "Šibenik");
+		profitni_centri.put("22999", "Šibenik - SME");
 		profitni_centri.put("10000", "Zagreb");
 		profitni_centri.put("21000", "Split");
 		return profitni_centri;

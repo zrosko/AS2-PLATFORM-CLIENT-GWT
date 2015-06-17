@@ -75,7 +75,7 @@ public class AS2NavigationPane extends VLayout {
     }
     public void addSection(String sectionName, DataSource dataSource) {
         sectionStack.addSection(new AS2NavigationPaneSectionXml(sectionName, dataSource));
-      }
+    }
     
     public SectionStackSection getSection(String sectionID){
     	return sectionStack.getSection(sectionID);

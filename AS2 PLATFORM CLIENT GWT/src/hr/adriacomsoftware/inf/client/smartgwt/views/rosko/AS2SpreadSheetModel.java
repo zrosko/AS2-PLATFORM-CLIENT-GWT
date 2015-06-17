@@ -19,15 +19,21 @@ import com.smartgwt.client.data.RecordList;
 public class AS2SpreadSheetModel extends AS2RestJSONDataSource  {
 	
 	private static HashMap<String,AS2SpreadSheetModel> instanceMap =  null;
+	String tableName;
+	String schemaName;
+	String databaseName;
 	
 	// Not Singleton (each table has its own)
-	public static AS2SpreadSheetModel getInstance(String tableName) {
+	public static AS2SpreadSheetModel getInstance(String databaseName, String schemaName,String tableName) {
 		if (instanceMap == null)
 			instanceMap = new HashMap<String,AS2SpreadSheetModel>();
 														
 		AS2SpreadSheetModel instance = instanceMap.get(tableName);
 		if(instance == null){
 			instance = new AS2SpreadSheetModel("AS2SpreadSheetModel_as2"+tableName);
+			instance.tableName = tableName;
+			instance.schemaName = schemaName;
+			instance.databaseName = databaseName;
 			instanceMap.put(tableName, instance);
 		}
 		return instance;
@@ -53,7 +59,7 @@ public class AS2SpreadSheetModel extends AS2RestJSONDataSource  {
 	
 	@Override
 	public String getRemoteObject() {
-		return "hr.as2.inf.server.security.authorization.facade.AS2AuthorizationFacadeServer";
+		return "hr.as2.inf.server.da.facade.AS2DataAccessFacadeServer";
 	}
 
 	@Override
@@ -67,6 +73,9 @@ public class AS2SpreadSheetModel extends AS2RestJSONDataSource  {
 		params.put(REMOTE_METHOD,"addTableRow");
 		params.put(REMOTE_OBJECT,getRemoteObject());
 		params.put(TRANSFORM_TO,getTransformTo());
+		params.put("tableName",tableName);
+		params.put("schemaName",schemaName);
+		params.put("databaseName",databaseName);
 		return params;
 	}
 
@@ -76,6 +85,9 @@ public class AS2SpreadSheetModel extends AS2RestJSONDataSource  {
 		params.put(REMOTE_METHOD,"updateTableRow");
 		params.put(REMOTE_OBJECT,getRemoteObject());
 		params.put(TRANSFORM_TO,getTransformTo());
+		params.put("tableName",tableName);
+		params.put("schemaName",schemaName);
+		params.put("databaseName",databaseName);
 		return params;
 	}
 
@@ -85,12 +97,14 @@ public class AS2SpreadSheetModel extends AS2RestJSONDataSource  {
 		params.put(REMOTE_METHOD,"deleteTableRow");
 		params.put(REMOTE_OBJECT,getRemoteObject());
 		params.put(TRANSFORM_TO,getTransformTo());
+		params.put("tableName",tableName);
+		params.put("schemaName",schemaName);
+		params.put("databaseName",databaseName);
 		return params;
 	}
 
 	@Override
 	public HashMap<String, String> getFetchOperationProperties() {
-		System.out.println("2-900 = "+isCreated());
 		HashMap<String,String> params = new HashMap<String,String>();
 		params.put(REMOTE_METHOD,"fetchTable");
 		params.put(REMOTE_OBJECT,getRemoteObject());
